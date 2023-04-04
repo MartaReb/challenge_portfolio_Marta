@@ -1,7 +1,7 @@
 # Challenge_portfolio_Marta
 
-## Zadanie 1: Konfiguracja oprogramowania
-### Podzadanie 1: Dlaczego zdecydowałam się wziąć udział w wyzwaniu Dare IT Challenge?
+## Task 1: Konfiguracja oprogramowania
+### Subtask 1: Dlaczego zdecydowałam się wziąć udział w wyzwaniu Dare IT Challenge?
 
 Cześć! Mam na imię Marta 🙂 
 
@@ -11,5 +11,9 @@ oraz poszerzać tę już zdobytą.
 
 Zdecydowałam się na udział w Dare-IT Challenge, ponieważ chciałabym poznać podstawy pisania testów automatycznych,
 z czym mam nadzieje będzie też związana moja zawodowa przyszłość. 
+
+### Subtask 4: Zadanie dla chętnych
+
+Wynik testu: 13/14 
 
 # framework_test
