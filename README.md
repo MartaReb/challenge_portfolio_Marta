@@ -26,34 +26,38 @@ Wynik testu: 13/14
 
 * //*[@id="login-label"]/following-sibling::div/input
 
+
 **password_field_xpath**
 
-//*[@id="password"]
+*  //*[@id="password"]
 
-//input[@name="password"]
+*  //input[@name="password"]
 
-//*[text()="Password"]/following-sibling::div/input
+*  //*[text()="Password"]/following-sibling::div/input
+
 
 **remaind_password_hyperlink_xpath**
 
-//div[@class="MuiCardContent-root"]/a
+*  //div[@class="MuiCardContent-root"]/a
 
-//h5/following-sibling::a
+*  //h5/following-sibling::a
 
-//*[last()][name()="a"]
+*  //*[last()][name()="a"]
+
 
 **sign_in_button_xpath**
 
-//*[@id="__next"]/form/div/div[2]/button
+*  //*[@id="__next"]/form/div/div[2]/button
 
-//button[@type="submit"]
+*  //button[@type="submit"]
 
-//button[contains(@class, "MuiButtonBase-root")]
+*  //button[contains(@class, "MuiButtonBase-root")]
+
 
 **dropdown_language_list_xpath**
 
-//*[@id="__next"]/form/div/div[2]/div/div
+*  //*[@id="__next"]/form/div/div[2]/div/div
 
-//div[contains(@class, "MuiSelect-root")]
+*  //div[contains(@class, "MuiSelect-root")]
 
-//div[contains(@class, "MuiInputBase-root")]/div
+*  //div[contains(@class, "MuiInputBase-root")]/div
