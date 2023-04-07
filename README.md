@@ -20,11 +20,11 @@ Wynik testu: 13/14
 
 **login_field_xpath**
 
-//*[@id="login"]
+* //*[@id="login"]
 
-//input[@name="login"]
+* //input[@name="login"]
 
-//*[@id="login-label"]/following-sibling::div/input
+* //*[@id="login-label"]/following-sibling::div/input
 
 **password_field_xpath**
 
