@@ -16,8 +16,8 @@ class AddMatchForm(BasePage):
     web_match_input_xpath = "//*[@name='webMatch']"
     general_input_xpath = "//*[@name='general']"
     rating_input_xpath = "//*[@name='rating']"
-    submit_button_xpath = "//button[span[text()='Submit']]"
-    clear_button_xpath = "//button[span[text()='Clear']]"
+    submit_button_xpath = "//*[span[text()='Submit']]"
+    clear_button_xpath = "//*[span[text()='Clear']]"
 
 
 pass

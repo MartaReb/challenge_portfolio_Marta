@@ -6,6 +6,7 @@ from selenium import webdriver
 from pages.add_player_form import AddPlayerForm
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
+from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
@@ -22,11 +23,7 @@ class TestOpenAddPlayer(unittest.TestCase):
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_open_add_player(self):
-        user_login = LoginPage(self.driver)
-        user_login.title_of_page()
-        user_login.type_in_email('user04@getnada.com')
-        user_login.type_in_password('Test-1234')
-        user_login.click_on_sign_in_button()
+        TestLoginPage.test_login_to_the_system(self)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_add_payer_link()
         add_player_form = AddPlayerForm(self.driver)
