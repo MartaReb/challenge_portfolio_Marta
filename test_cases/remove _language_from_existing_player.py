@@ -3,13 +3,14 @@ import time
 import unittest
 from selenium import webdriver
 
-from pages.add_player_form import AddPlayerForm
 from pages.dashboard import Dashboard
+from pages.edit_player_form import EditPlayer
+from pages.players_list import PlayersList
 from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestOpenAddPlayer(unittest.TestCase):
+class TestRemoveLanguageFromExistingPlayer(unittest.TestCase):
 
     driver = None
 
@@ -21,13 +22,18 @@ class TestOpenAddPlayer(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_open_add_player(self):
+    def test_remove_language_from_existing_player(self):
         TestLoginPage.test_login_to_the_system(self)
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.click_on_add_player_link()
-        add_player_form = AddPlayerForm(self.driver)
-        add_player_form.title_of_page()
+        dashboard_page.click_on_players_button()
+        players_list = PlayersList(self.driver)
+        players_list.click_on_player()
+        edit_player_page = EditPlayer(self.driver)
         time.sleep(3)
+        edit_player_page.click_on_remove_language_button()
+        time.sleep(3)
+        edit_player_page.click_on_submit_button()
+        time.sleep(5)
 
     @classmethod
     def tearDown(self):

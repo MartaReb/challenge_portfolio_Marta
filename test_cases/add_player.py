@@ -26,8 +26,12 @@ class TestOpenAddPlayer(unittest.TestCase):
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_add_player_link()
         add_player_form = AddPlayerForm(self.driver)
-        add_player_form.title_of_page()
-        time.sleep(3)
+        add_player_form.type_in_name('Wiosna')
+        add_player_form.type_in_surname('Lato')
+        add_player_form.type_in_age('01/01/2000')
+        add_player_form.type_in_main_position('bramkarz')
+        add_player_form.click_on_submit_button()
+        time.sleep(5)
 
     @classmethod
     def tearDown(self):

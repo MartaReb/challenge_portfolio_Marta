@@ -9,7 +9,7 @@ from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestOpenAddPlayer(unittest.TestCase):
+class TestClearAddPlayerForm(unittest.TestCase):
 
     driver = None
 
@@ -21,13 +21,18 @@ class TestOpenAddPlayer(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_open_add_player(self):
+    def test_clear_add_player_form(self):
         TestLoginPage.test_login_to_the_system(self)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_add_player_link()
         add_player_form = AddPlayerForm(self.driver)
-        add_player_form.title_of_page()
-        time.sleep(3)
+        add_player_form.type_in_name('Wiosna')
+        add_player_form.type_in_surname('Lato')
+        add_player_form.type_in_age('01/01/2000')
+        add_player_form.type_in_main_position('bramkarz')
+        time.sleep(5)
+        add_player_form.click_on_clear_button()
+        time.sleep(5)
 
     @classmethod
     def tearDown(self):

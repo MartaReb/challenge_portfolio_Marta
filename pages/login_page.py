@@ -2,8 +2,8 @@ from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
-    title_login_field_xpath = "//*[text()='Scouts Panel']"
-    expected_text = "Scouts Panel"
+    header_login_form_xpath = "//*[text()='Scouts Panel']"
+    expected_header = "Scouts Panel"
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//*[@type='submit']"
@@ -24,8 +24,8 @@ class LoginPage(BasePage):
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
 
-    def title_of_login_form(self):
-        self.assert_element_text(self.driver, self.title_login_field_xpath, self.expected_text)
+    def header_of_login_form(self):
+        self.assert_element_text(self.driver, self.header_login_form_xpath, self.expected_header)
 
 
 
