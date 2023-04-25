@@ -61,3 +61,7 @@ Wynik testu: 13/14
 *  //div[contains(@class, "MuiSelect-root")]
 
 *  //div[contains(@class, "MuiInputBase-root")]/div
+
+## Task 4: Przypadki testowe
+
+[Przypadki testowe](https://docs.google.com/spreadsheets/d/1M61LP4jmVPXJPkLhAGm3Ap_cufrFDYdIiIHo-g25NOI/edit#gid=0)
