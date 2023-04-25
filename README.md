@@ -64,4 +64,4 @@ Wynik testu: 13/14
 
 ## Task 4: Przypadki testowe
 
-[Przypadki testowe](https://docs.google.com/spreadsheets/d/1M61LP4jmVPXJPkLhAGm3Ap_cufrFDYdIiIHo-g25NOI/edit#gid=0)
+[Przykładowe przypadki testowe dla aplikacji Scouts Panel](https://docs.google.com/spreadsheets/d/1M61LP4jmVPXJPkLhAGm3Ap_cufrFDYdIiIHo-g25NOI/edit#gid=0)
