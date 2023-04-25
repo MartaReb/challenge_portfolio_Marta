@@ -31,6 +31,7 @@ class TestOpenAddPlayer(unittest.TestCase):
         add_player_form.type_in_age('01/01/2000')
         add_player_form.type_in_main_position('bramkarz')
         add_player_form.click_on_submit_button()
+        self.driver.save_screenshot("../screenshots/TC-1.png")
         time.sleep(5)
 
     @classmethod

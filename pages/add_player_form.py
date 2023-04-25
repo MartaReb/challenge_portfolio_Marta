@@ -14,7 +14,7 @@ class AddPlayerForm(BasePage):
     clear_button_xpath = "//*[span[text()='Clear']]"
 
     def title_of_page(self):
-        time.sleep(5)
+        self.wait_for_element_to_be_clickable(self.submit_button_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
 
     def type_in_name(self, name):
@@ -30,9 +30,11 @@ class AddPlayerForm(BasePage):
         self.field_send_keys(self.main_position_field_xpath, position)
 
     def click_on_submit_button(self):
+        self.wait_for_element_to_be_clickable(self.submit_button_xpath)
         self.click_on_the_element(self.submit_button_xpath)
 
     def click_on_clear_button(self):
+        self.wait_for_element_to_be_clickable(self.clear_button_xpath)
         self.click_on_the_element(self.clear_button_xpath)
 
 

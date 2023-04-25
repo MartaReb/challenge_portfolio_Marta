@@ -27,6 +27,7 @@ class LoginPage(BasePage):
     def header_of_login_form(self):
         self.assert_element_text(self.driver, self.header_login_form_xpath, self.expected_header)
 
+pass
 
 
 

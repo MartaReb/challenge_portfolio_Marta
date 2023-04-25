@@ -3,6 +3,7 @@ import time
 import unittest
 from selenium import webdriver
 
+
 from pages.dashboard import Dashboard
 from pages.edit_player_form import EditPlayer
 from pages.players_list import PlayersList
@@ -31,8 +32,8 @@ class TestAddLanguageToExistingPlayerForm(unittest.TestCase):
         edit_player_page = EditPlayer(self.driver)
         edit_player_page.click_on_add_language()
         edit_player_page.type_in_languages('polski')
-        time.sleep(3)
         edit_player_page.click_on_submit_button()
+        self.driver.save_screenshot("../screenshots/TC-3.png")
         time.sleep(5)
 
     @classmethod

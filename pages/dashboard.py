@@ -21,7 +21,7 @@ class Dashboard(BasePage):
         assert self.get_page_title(self.dashboard_url) == self.expected_title
 
     def click_on_add_player_link(self):
-        time.sleep(3)
+        self.wait_for_element_to_be_clickable(self.add_player_hyperlink_xpath)
         self.click_on_the_element(self.add_player_hyperlink_xpath)
 
     def click_on_players_button(self):
@@ -31,4 +31,5 @@ class Dashboard(BasePage):
         self.click_on_the_element(self.sign_out_button_xpath)
 
 pass
+
 

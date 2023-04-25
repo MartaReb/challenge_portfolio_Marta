@@ -27,6 +27,7 @@ class TestOpenAddPlayer(unittest.TestCase):
         dashboard_page.click_on_add_player_link()
         add_player_form = AddPlayerForm(self.driver)
         add_player_form.title_of_page()
+
         time.sleep(3)
 
     @classmethod

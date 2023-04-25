@@ -10,3 +10,5 @@ class PlayersList(BasePage):
         time.sleep(3)
         self.click_on_the_element(self.player_name_on_the_list)
 
+
+pass

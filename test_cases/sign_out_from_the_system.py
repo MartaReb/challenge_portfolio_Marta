@@ -4,6 +4,7 @@ import unittest
 from selenium import webdriver
 
 from pages.dashboard import Dashboard
+from pages.login_page import LoginPage
 from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
@@ -24,6 +25,9 @@ class TestSignOutFromTheSystem(unittest.TestCase):
         TestLoginPage.test_login_to_the_system(self)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_sign_out_button()
+        user_login = LoginPage(self.driver)
+        user_login.title_of_page()
+        self.driver.save_screenshot("../screenshots/TC-5.png")
         time.sleep(5)
 
     @classmethod
