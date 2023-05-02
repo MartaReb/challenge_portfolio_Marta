@@ -32,6 +32,10 @@ class TestClearAddPlayerForm(unittest.TestCase):
         add_player_form.type_in_main_position('bramkarz')
         add_player_form.click_on_clear_button()
         self.driver.save_screenshot("../screenshots/TC-2.png")
+        add_player_form.check_name_field_empty()
+        add_player_form.check_surname_field_empty()
+        add_player_form.check_age_field_empty()
+        add_player_form.check_main_position_field_empty()
         time.sleep(5)
 
     @classmethod

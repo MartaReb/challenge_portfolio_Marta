@@ -34,6 +34,7 @@ class TestAddLanguageToExistingPlayerForm(unittest.TestCase):
         edit_player_page.type_in_languages('polski')
         edit_player_page.click_on_submit_button()
         self.driver.save_screenshot("../screenshots/TC-3.png")
+        edit_player_page.add_language_check()
         time.sleep(5)
 
     @classmethod

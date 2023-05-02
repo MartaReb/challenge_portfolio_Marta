@@ -9,7 +9,7 @@ from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestOpenAddPlayer(unittest.TestCase):
+class TestAddPlayer(unittest.TestCase):
 
     driver = None
 
@@ -21,7 +21,7 @@ class TestOpenAddPlayer(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_open_add_player(self):
+    def test_add_player(self):
         TestLoginPage.test_login_to_the_system(self)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_add_player_link()
@@ -32,6 +32,9 @@ class TestOpenAddPlayer(unittest.TestCase):
         add_player_form.type_in_main_position('bramkarz')
         add_player_form.click_on_submit_button()
         self.driver.save_screenshot("../screenshots/TC-1.png")
+        add_player_form.click_on_main_page_button()
+        dashboard_page = Dashboard(self.driver)
+        dashboard_page.last_created_player()
         time.sleep(5)
 
     @classmethod

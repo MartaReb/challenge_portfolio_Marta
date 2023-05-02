@@ -7,6 +7,8 @@ class EditPlayer(BasePage):
     languages_input_xpath = "//*[@name='languages[0]']"
     submit_button_xpath = "//*[@type='submit']"
     remove_language_button = "//div[15]/div[1]/button"
+    expected_added_language = "polski"
+    expected_language_displayed = ""
 
     def click_on_add_language(self):
         self.wait_for_visibility_of_element_located(self.add_language_button_xpath)
@@ -23,8 +25,10 @@ class EditPlayer(BasePage):
         self.wait_for_visibility_of_element_located(self.remove_language_button)
         self.click_on_the_element(self.remove_language_button)
 
-    # def get_page_title(self, url):
-    #     self.driver.get(url)
-    #     return self.driver.title
+    def add_language_check(self):
+        self.wait_for_element_to_be_clickable(self.remove_language_button)
+        self.assert_element_value(self.driver, self.languages_input_xpath, self.expected_added_language)
 
-pass
+    def deleted_language_check(self):
+        self.wait_for_element_to_be_clickable(self.add_language_button_xpath)
+        self.assert_element_value(self.driver, self.languages_input_xpath, self.expected_language_displayed)

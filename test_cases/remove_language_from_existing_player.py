@@ -10,7 +10,7 @@ from test_cases.login_to_the_system import TestLoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class TestAddLanguageToExistingPlayerForm(unittest.TestCase):
+class TestRemoveLanguageFromExistingPlayerForm(unittest.TestCase):
 
     driver = None
 
@@ -32,6 +32,8 @@ class TestAddLanguageToExistingPlayerForm(unittest.TestCase):
         edit_player_page.click_on_remove_language_button()
         edit_player_page.click_on_submit_button()
         self.driver.save_screenshot("../screenshots/TC-4.png")
+        edit_player_page.click_on_add_language()
+        edit_player_page.deleted_language_check()
         time.sleep(5)
 
     @classmethod

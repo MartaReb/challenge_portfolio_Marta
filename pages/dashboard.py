@@ -8,6 +8,8 @@ class Dashboard(BasePage):
     sign_out_button_xpath = "//*[text()='Sign out']"
     dev_team_contact_hyperlink_xpath = "//*[span[text()='Dev team contact']]"
     last_created_player_hyperlink_xpath = "//div[3]/div/div/a[1]"
+    name_of_last_created_player_xpath = "//div[3]/div/div/a[1]/button/span[1]"
+    expected_last_created_player = "WIOSNA LATO"
     last_updated_player_hyperlink_xpath = "//div[3]/div/div/a[2]"
     last_created_match_hyperlink_xpath = "//div[3]/div/div/a[3]"
     last_updated_match_hyperlink_xpath = "//div[3]/div/div/a[4]"
@@ -30,6 +32,6 @@ class Dashboard(BasePage):
     def click_on_sign_out_button(self):
         self.click_on_the_element(self.sign_out_button_xpath)
 
-pass
-
-
+    def last_created_player(self):
+        self.wait_for_visibility_of_element_located(self.last_created_player_hyperlink_xpath)
+        self.assert_element_text(self.driver, self.name_of_last_created_player_xpath, self.expected_last_created_player)
