@@ -68,4 +68,5 @@ Wynik testu: 13/14
 
 ## Task 6:  Zgłaszanie błędów i raport z testów
 [Błędy znaleziony przez testy automatyczne](https://docs.google.com/spreadsheets/d/1nC0_WXUhKgu-T4y3OaqL0u1jzyrGmKAO0GEPoPvXQkw/edit#gid=0)
+
 [Raport z przeprowadzonych testów automatycznych](https://docs.google.com/document/d/1WgoSn8IIT5IQyRMi-dL7GQSK4DAr2coVu_QfeKt29HI/edit)
