@@ -1,4 +1,4 @@
-# Challenge_portfolio_Marta
+### Ten plik zostanie zmieniony i pozostawiona zostanie tylko instrukcja jak uruchomić testy (podobnie jak zaczęłam robić to w pliku dla Robot Framework) :) Zastanawiam się tylko czy zostawić testalia tutaj, czy umieścić je w [README](https://github.com/MartaReb/Portfolio) z ogólnym opisem portfolio....
 
 ## Task 1: Konfiguracja oprogramowania
 ### Subtask 1: Dlaczego zdecydowałam się wziąć udział w wyzwaniu Dare IT Challenge?
