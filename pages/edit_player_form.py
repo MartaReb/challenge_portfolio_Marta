@@ -1,5 +1,4 @@
 from pages.base_page import BasePage
-import time
 
 
 class EditPlayer(BasePage):
@@ -9,6 +8,8 @@ class EditPlayer(BasePage):
     remove_language_button = "//div[15]/div[1]/button"
     expected_added_language = "polski"
     expected_language_displayed = ""
+    saved_player_info_xpath = "//*[text()='Saved player.']"
+
 
     def click_on_add_language(self):
         self.wait_for_visibility_of_element_located(self.add_language_button_xpath)
@@ -30,5 +31,6 @@ class EditPlayer(BasePage):
         self.assert_element_value(self.driver, self.languages_input_xpath, self.expected_added_language)
 
     def deleted_language_check(self):
-        self.wait_for_element_to_be_clickable(self.add_language_button_xpath)
-        self.assert_element_value(self.driver, self.languages_input_xpath, self.expected_language_displayed)
+        self.wait_for_visibility_of_element_located(self.saved_player_info_xpath)
+        self.invisibility_of_element(self.languages_input_xpath)
+

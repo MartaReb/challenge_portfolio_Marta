@@ -1,5 +1,5 @@
 from pages.base_page import BasePage
-import time
+
 
 class Dashboard(BasePage):
     main_page_button_xpath = "//*[text()='Main page']"
@@ -16,7 +16,7 @@ class Dashboard(BasePage):
     last_updated_report_hyperlink_xpath = "//div[3]/div/div/a[5]"
     add_player_hyperlink_xpath = "//*[@href='/en/players/add']"
     expected_title = "Scouts panel"
-    dashboard_url = "https://scouts-test.futbolkolektyw.pl/"
+    dashboard_url = "https://scouts.futbolkolektyw.pl/"
 
     def title_of_page(self):
         self.wait_for_element_to_be_clickable(self.main_page_button_xpath)

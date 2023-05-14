@@ -5,7 +5,7 @@ from pages.base_page import BasePage
 
 class AddPlayerForm(BasePage):
     expected_title = "Add player"
-    dashboard_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
+    dashboard_url = "https://scouts.futbolkolektyw.pl/en/players/add"
     name_field_xpath = "//*[@name='name']"
     surname_field_xpath = "//*[@name='surname']"
     age_field_xpath = "//*[@name='age']"

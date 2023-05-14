@@ -3,6 +3,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.expected_conditions import invisibility_of_element_located
 from selenium.webdriver.support.wait import WebDriverWait
 
 from utils.settings import DEFAULT_LOCATOR_TYPE
@@ -24,13 +25,6 @@ class BasePage():
         return self.driver.title
 
     def assert_element_text(self, driver, xpath, expected_text):
-        """Comparing expected text with observed value from web element
-
-            :param driver: webdriver instance
-            :param xpath: xpath to element with text to be observed
-            :param expected_text: text what we're expecting to be found
-            :return: None
-        """
         element = driver.find_element(by=By.XPATH, value=xpath)
         element_text = element.text
         assert expected_text == element_text
@@ -46,3 +40,6 @@ class BasePage():
     def wait_for_visibility_of_element_located(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.visibility_of_element_located((locator_type, locator)))
+
+    def invisibility_of_element(self, element):
+        assert invisibility_of_element_located(element)

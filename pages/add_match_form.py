@@ -19,5 +19,3 @@ class AddMatchForm(BasePage):
     submit_button_xpath = "//*[span[text()='Submit']]"
     clear_button_xpath = "//*[span[text()='Clear']]"
 
-
-pass

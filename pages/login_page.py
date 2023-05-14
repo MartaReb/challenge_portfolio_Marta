@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
-    login_url = "https://scouts-test.futbolkolektyw.pl/login"
+    login_url = "https://scouts.futbolkolektyw.pl/en/"
     expected_title = "Scouts panel - sign in"
     header_login_form_xpath = "//*[text()='Scouts Panel']"
     expected_header = "Scouts Panel"
